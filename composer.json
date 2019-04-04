@@ -10,6 +10,12 @@
             "homepage": "https://github.com/ezsystems/ezplatform/contributors"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "/Users/maciejkobus/Projects/ezpublish-kernel"
+        }
+    ],
     "require": {
         "php": "^7.1.3",
         "ext-ctype": "*",
@@ -32,7 +38,9 @@
         "symfony/twig-bundle": "4.2.*",
         "symfony/validator": "4.2.*",
         "symfony/web-link": "4.2.*",
-        "symfony/yaml": "4.2.*"
+        "symfony/yaml": "4.2.*",
+        "ezsystems/ezpublish-kernel": "dev-symfony4",
+        "friendsofsymfony/jsrouting-bundle": "^2.3.0"
     },
     "require-dev": {
         "symfony/debug-pack": "*",

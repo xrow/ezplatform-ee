@@ -16,15 +16,15 @@ parameters:
 # Configuration for Database connection, can have several connections used by eZ Repositories in ezplatform.yml
 doctrine:
     dbal:
-        connections:
-            default:
-                driver: '%database_driver%'
-                host: '%database_host%'
-                port: '%database_port%'
-                dbname: '%database_name%'
-                user: '%database_user%'
-                password: '%database_password%'
-                charset: '%database_charset%'
+        # configure these for your database server
+        driver: 'pdo_mysql'
+        server_version: '5.7'
+        charset: utf8mb4
+        default_table_options:
+            charset: utf8mb4
+            collate: utf8mb4_unicode_ci
+
+        url: '%env(resolve:DATABASE_URL)%'
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
@@ -87,36 +87,11 @@ framework:
     php_errors:
         log: true
 
-# Twig Configuration
-twig:
-    debug: '%kernel.debug%'
-    strict_variables: '%kernel.debug%'
-
-# Assetic Configuration
-assetic:
-    debug: '%kernel.debug%'
-    use_controller: '%kernel.debug%'
-    bundles: [ EzPlatformAdminUiBundle ]
-    #java: /usr/bin/java
-    filters:
-        cssrewrite: ~
-        scssphp:
-            formatter: 'Leafo\ScssPhp\Formatter\Crunched'
-            import_paths: ['%kernel.project_dir%/web/']
-
 # Webpack Encore Configuration
 webpack_encore:
     output_path: "%kernel.project_dir%/web/assets/build"
     builds:
         ezplatform: "%kernel.project_dir%/web/assets/ezplatform/build"
-
-# Swiftmailer Configuration
-swiftmailer:
-    transport: '%mailer_transport%'
-    host: '%mailer_host%'
-    username: '%mailer_user%'
-    password: '%mailer_password%'
-    spool: { type: memory }
 
 # FOSHttpCache Configuration
 fos_http_cache:

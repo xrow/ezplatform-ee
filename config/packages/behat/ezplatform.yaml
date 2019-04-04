@@ -1,6 +1,3 @@
-imports:
-    - { resource: ezplatform.yml }
-
 ezpublish:
     siteaccess:
         list: ["site", "other_site"]
