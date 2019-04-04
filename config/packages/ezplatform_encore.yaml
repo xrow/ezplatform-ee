@@ -1,0 +1,3 @@
+webpack_encore:
+    builds:
+        ezplatform: "%kernel.project_dir%/public/ezplatform/build"

@@ -1,16 +1,17 @@
-# Optimized File cache adapter (from: https://github.com/ezsystems/symfony-tools)
+# Reusable service for memcache cache for use in generic.php and plaformsh.php on demand
 #
-# Loaded by default, for use on single server setups.
-# If you are on Windows you would have to use `cache.app` by setting `env(CACHE_POOL): "cache.app"` parameter
+# For further reading on setup with eZ Platform and Memcached:
+# https://doc.ezplatform.com/en/latest/guide/persistence_cache/#memcached
 services:
-    cache.tagaware.filesystem:
-        class: Symfony\Component\Cache\Adapter\TagAwareAdapter
-        arguments:
-            - '@cache.adapter.filesystem'
+    cache.memcached:
+        parent: cache.adapter.memcached
         tags:
             - name: cache.pool
               clearer: cache.app_clearer
-              # Cache namespace prefix overriding the one used by Symfony by default
+              # Example from vendor/symfony/symfony/src/Symfony/Component/Cache/Traits/MemcachedTrait.php:
+              # memcached://user:pass@localhost?weight=33'
+              provider: 'memcached://%cache_dsn%'
+              # Cache namespace prefix overriding the one used by Symfony globally
               # This makes sure cache is reliably shared across whole cluster and all Symfony env's
               # Can be used for blue/green deployment strategies when changes affect content cache.
               # For multi db setup adapt this to be unique per pool (one pool per database)

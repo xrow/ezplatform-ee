@@ -1,0 +1,6 @@
+# If you are not using MySQL, you can comment-out this section
+ez_doctrine_schema:
+    tables:
+        options:
+            charset: '%database_charset%'
+            collate: '%database_collation%'
