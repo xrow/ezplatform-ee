@@ -1,9 +1,12 @@
+parameters:
+    locale_fallback: en
+
 framework:
-    default_locale: '%locale%'
+    default_locale: '%locale_fallback%'
     translator:
         default_path: '%kernel.project_dir%/translations'
         fallbacks:
-            - '%locale%'
+            - '%locale_fallback%'
 
 jms_translation:
     source_language: en
@@ -19,10 +22,10 @@ jms_translation:
 #            excluded_dirs: [Behat, Tests, node_modules]
 #            extractor:
 #                - ez_policy
-#            output_format: xliff
+#            output_format: "xliff"
 #        admin_modules:
 #            dirs:
 #                - '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui-modules/src'
 #            output_dir: '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui-modules/Resources/translations/'
 #            excluded_dirs: [Behat, Tests, node_modules]
-#            output_format: xliff
+#            output_format: "xliff"
