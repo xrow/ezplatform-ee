@@ -21,3 +21,14 @@ ezpublish:
                     - 5 # Users
                     - 43 # Media
                     - 48 # Setup
+
+jms_translation:
+    configs:
+        admin:
+            dirs:
+                - '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui/src'
+            output_dir: '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui/src/bundle/Resources/translations/'
+            excluded_dirs: [Behat, Tests, node_modules]
+            extractor:
+                - ez_policy
+            output_format: "xliff"

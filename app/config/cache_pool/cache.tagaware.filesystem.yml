@@ -3,8 +3,9 @@
 # Loaded by default, for use on single server setups.
 services:
     cache.tagaware.filesystem:
-        class: Symfony\Component\Cache\Adapter\TagAware\FilesystemTagAwareAdapter
-        parent: cache.adapter.filesystem
+        class: Symfony\Component\Cache\Adapter\TagAwareAdapter
+        arguments:
+            - '@cache.adapter.filesystem'
         tags:
             - name: cache.pool
               clearer: cache.app_clearer

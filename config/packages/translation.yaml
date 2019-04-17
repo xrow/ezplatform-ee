@@ -1,31 +1,6 @@
-parameters:
-    locale_fallback: en
-
 framework:
-    default_locale: '%locale_fallback%'
+    default_locale: '%locale%'
     translator:
         default_path: '%kernel.project_dir%/translations'
         fallbacks:
-            - '%locale_fallback%'
-
-jms_translation:
-    source_language: en
-    locales: [en]
-    dumper:
-        add_references: false
-        add_date: false
-    configs:
-#        admin:
-#            dirs:
-#                - '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui/src'
-#            output_dir: '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui/src/bundle/Resources/translations/'
-#            excluded_dirs: [Behat, Tests, node_modules]
-#            extractor:
-#                - ez_policy
-#            output_format: "xliff"
-#        admin_modules:
-#            dirs:
-#                - '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui-modules/src'
-#            output_dir: '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui-modules/Resources/translations/'
-#            excluded_dirs: [Behat, Tests, node_modules]
-#            output_format: "xliff"
+            - '%locale%'
