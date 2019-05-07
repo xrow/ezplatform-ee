@@ -11,7 +11,6 @@ return [
     Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle::class => ['all' => true],
     Symfony\Bundle\MonologBundle\MonologBundle::class => ['all' => true],
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
-    Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle::class => ['all' => true],
     Doctrine\Bundle\DoctrineCacheBundle\DoctrineCacheBundle::class => ['all' => true],
     Doctrine\Bundle\DoctrineBundle\DoctrineBundle::class => ['all' => true],
     Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle::class => ['all' => true],
@@ -40,4 +39,5 @@ return [
     EzSystems\EzPlatformUserBundle\EzPlatformUserBundle::class => ['all' => true],
     EzSystems\EzPlatformAdminUiModulesBundle\EzPlatformAdminUiModulesBundle::class => ['all' => true],
     EzSystems\EzPlatformAdminUiAssetsBundle\EzPlatformAdminUiAssetsBundle::class => ['all' => true],
+    FOS\HttpCacheBundle\FOSHttpCacheBundle::class => ['all' => true],
 ];
