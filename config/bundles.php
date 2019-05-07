@@ -15,6 +15,7 @@ return [
     Doctrine\Bundle\DoctrineCacheBundle\DoctrineCacheBundle::class => ['all' => true],
     Doctrine\Bundle\DoctrineBundle\DoctrineBundle::class => ['all' => true],
     Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle::class => ['all' => true],
+    FOS\HttpCacheBundle\FOSHttpCacheBundle::class => ['all' => true],
     FOS\JsRoutingBundle\FOSJsRoutingBundle::class => ['all' => true],
     JMS\TranslationBundle\JMSTranslationBundle::class => ['all' => true],
     Oneup\FlysystemBundle\OneupFlysystemBundle::class => ['all' => true],
@@ -25,6 +26,7 @@ return [
     Knp\Bundle\MenuBundle\KnpMenuBundle::class => ['all' => true],
     WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle::class => ['all' => true],
     // eZ Platform
+    EzSystems\PlatformHttpCacheBundle\EzSystemsPlatformHttpCacheBundle::class => ['all' => true],
     eZ\Bundle\EzPublishCoreBundle\EzPublishCoreBundle::class => ['all' => true],
     eZ\Bundle\EzPublishLegacySearchEngineBundle\EzPublishLegacySearchEngineBundle::class => ['all' => true],
     eZ\Bundle\EzPublishIOBundle\EzPublishIOBundle::class => ['all' => true],
