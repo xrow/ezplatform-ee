@@ -1,4 +1,6 @@
 {
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "name": "ezsystems/ezplatform-ee",
     "description": "eZ Platform Enterprise Edition distribution",
     "homepage": "https://github.com/ezsystems/ezplatform-ee",
@@ -11,7 +13,59 @@
         }
     ],
     "repositories": [
-        { "type": "composer", "url": "https://updates.ez.no/ttl" }
+        { "type": "composer", "url": "https://updates.ez.no/ttl" },
+        {
+            "type": "vcs",
+            "url": "/Users/maciejkobus/Projects/ezplatform-http-cache"
+        },
+        {
+            "type": "vcs",
+            "url": "/Users/maciejkobus/Projects/doctrine-dbal-schema"
+        },
+        {
+            "type": "vcs",
+            "url": "/Users/maciejkobus/Projects/ezpublish-kernel"
+        },
+        {
+            "type": "vcs",
+            "url": "/Users/maciejkobus/Projects/repository-forms"
+        },
+        {
+            "type": "vcs",
+            "url": "/Users/maciejkobus/Projects/ezplatform-richtext"
+        },
+        {
+            "type": "vcs",
+            "url": "/Users/maciejkobus/Projects/ezplatform-user"
+        },
+        {
+            "type": "vcs",
+            "url": "/Users/maciejkobus/Projects/ezplatform-admin-ui"
+        },
+        {
+            "type": "vcs",
+            "url": "/Users/maciejkobus/Projects/ezplatform-admin-ui-modules"
+        },
+        {
+            "type": "vcs",
+            "url": "/Users/maciejkobus/Projects/ezplatform-design-engine"
+        },
+        {
+            "type": "vcs",
+            "url": "/Users/maciejkobus/Projects/ez-support-tools"
+        },
+        {
+            "type": "vcs",
+            "url": "/Users/maciejkobus/Projects/ezplatform-core"
+        },
+        {
+            "type": "path",
+            "url": "/Users/maciejkobus/Projects/ezplatform-admin-ui-assets"
+        },
+        {
+            "type": "path",
+            "url": "/Users/maciejkobus/Projects/ezplatform-standard-design"
+        }
     ],
     "replace": {
         "ezsystems/ezstudio": "*",
@@ -19,9 +73,8 @@
     },
     "autoload": {
         "psr-4": {
-            "AppBundle\\": "src/AppBundle/"
-        },
-        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
+            "App\\": "src/"
+        }
     },
     "autoload-dev": {
         "psr-4": { "Tests\\": "tests/" },
@@ -92,13 +145,10 @@
         "liuggio/fastest": "^1.6"
     },
     "conflict": {
-        "symfony/symfony": "3.4.9||3.4.12||3.4.16",
-        "doctrine/dbal": "2.7.0",
-        "twig/twig": "2.6.1",
-        "symfony/webpack-encore-bundle": "1.2.0||1.2.1"
+      "symfony/symfony": "*"
     },
     "scripts": {
-        "symfony-scripts": [
+        "auto-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
@@ -110,10 +160,10 @@
             "@php bin/security-checker security:check"
         ],
         "post-install-cmd": [
-            "@symfony-scripts"
+            "@auto-scripts"
         ],
         "post-update-cmd": [
-            "@symfony-scripts"
+            "@auto-scripts"
         ],
         "post-create-project-cmd": [
             "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::installWelcomeText"
@@ -130,15 +180,9 @@
         }
     },
     "extra": {
-        "symfony-app-dir": "app",
-        "symfony-bin-dir": "bin",
-        "symfony-var-dir": "var",
-        "symfony-web-dir": "web",
-        "symfony-tests-dir": "tests",
-        "symfony-assets-install": "relative",
-        "incenteev-parameters": {
-            "keep-outdated": true,
-            "file": "app/config/parameters.yml"
+        "symfony": {
+            "allow-contrib": false,
+            "require": "4.2.*"
         },
         "branch-alias": {
             "dev-master": "3.0.x-dev"

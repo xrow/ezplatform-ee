@@ -1,0 +1,5 @@
+imports:
+    - { resource: ../dev/* }
+
+_ezplatform_behat:
+    resource: '@EzPlatformBehatBundle/Resources/config/routing.yml'
