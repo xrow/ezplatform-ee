@@ -66,6 +66,7 @@
 
 composer.phar
 composer.lock
+symfony.lock
 yarn.lock
 .buildpath
 .project
@@ -102,7 +103,7 @@ yarn-error.log
 behat.yml
 ###< behat/symfony2-extension ###
 
-###> phpunit/phpunit ###
+###> symfony/phpunit-bridge ###
+.phpunit
 /phpunit.xml
-.phpunit.result.cache
-###< phpunit/phpunit ###
+###< symfony/phpunit-bridge ###
