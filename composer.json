@@ -75,7 +75,8 @@
         "phpunit/phpunit": "^6.5"
     },
     "conflict": {
-        "symfony/symfony": "*"
+        "symfony/symfony": "*",
+        "twig/twig": "2.11.2"
     },
     "replace": {
         "paragonie/random_compat": "2.*",
