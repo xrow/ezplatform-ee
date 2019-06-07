@@ -1,0 +1,33 @@
+parameters:
+    # Enabled token based authentication in PB
+    page_builder.token_authenticator.enabled: true
+
+ezpublish:
+    system:
+        admin_group:
+            page_builder:
+                siteaccess_list: [site]
+            content_tree_module:
+                contextual_tree_root_location_ids:
+                    - 2 # Home (Content structure)
+                    - 5 # Users
+                    - 43 # Media
+                    - 48 # Setup
+                    - 55 # Forms
+
+framework:
+    esi: true
+    fragments: true
+
+lexik_jwt_authentication:
+    secret_key: '%env(APP_SECRET)%'
+    encoder:
+        signature_algorithm: HS256
+    # Disabled by default, because Page builder use an custom extractor
+    token_extractors:
+        authorization_header:
+            enabled: false
+        cookie:
+            enabled: false
+        query_parameter:
+            enabled: false

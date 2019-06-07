@@ -1,0 +1,4 @@
+ezplatform.ee.page_builder:
+    resource: '@EzPlatformPageBuilderBundle/Resources/config/routing.yml'
+    defaults:
+        siteaccess_group_whitelist: '%admin_group_name%'
