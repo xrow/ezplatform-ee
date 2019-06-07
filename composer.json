@@ -12,171 +12,84 @@
             "homepage": "https://github.com/ezsystems/ezplatform-ee/contributors"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezplatform-form-builder"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezplatform-rest"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/BehatBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/flex-workflow"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/date-based-publisher"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezplatform-workflow"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezstudio-installer"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezplatform-cron"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezplatform-page-builder"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezplatform-page-fieldtype"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ez-support-tools"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezplatform-http-cache"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/doctrine-dbal-schema"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezpublish-kernel"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/repository-forms"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezplatform-richtext"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezplatform-user"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezplatform-admin-ui"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezplatform-admin-ui-modules"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezplatform-design-engine"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ez-support-tools"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/maciejkobus/Projects/ezplatform-core"
-        },
-        {
-            "type": "path",
-            "url": "/Users/maciejkobus/Projects/ezplatform-admin-ui-assets"
-        },
-        {
-            "type": "path",
-            "url": "/Users/maciejkobus/Projects/ezplatform-standard-design"
-        },
-        { "type": "composer", "url": "https://updates.ez.no/ttl" }
-    ],
     "require": {
-        "php": "^7.2",
+        "php": "^7.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "doctrine/doctrine-bundle": "^1.11",
-        "doctrine/orm": "^2.6",
         "ezsystems/doctrine-dbal-schema": "dev-symfony4 as 1.0.x-dev",
         "ezsystems/ez-support-tools": "dev-symfony4 as 2.0.x-dev",
         "ezsystems/ezplatform-admin-ui": "dev-symfony4 as 2.0.x-dev",
-        "ezsystems/ezplatform-admin-ui-assets": "dev-symfony4 as 4.1.x-dev",
+        "ezsystems/ezplatform-admin-ui-assets": "dev-symfony4 as 2.0.x-dev",
         "ezsystems/ezplatform-admin-ui-modules": "dev-symfony4 as 2.0.x-dev",
         "ezsystems/ezplatform-core": "dev-symfony4 as 2.0.x-dev",
-        "ezsystems/ezplatform-cron": "dev-symfony4 as 3.0.x-dev",
         "ezsystems/ezplatform-design-engine": "dev-symfony4 as 3.0.x-dev",
+        "ezsystems/ezplatform-richtext": "dev-symfony4 as 2.0.x-dev",
+        "ezsystems/ezplatform-standard-design": "dev-symfony4 as 2.0.x-dev",
+        "ezsystems/ezplatform-user": "dev-symfony4 as 2.0.x-dev",
+        "ezsystems/ezpublish-kernel": "dev-symfony4 as 8.0.x-dev",
+        "ezsystems/repository-forms": "dev-symfony4 as 3.0.x-dev",
+        "ezsystems/ezplatform-rest": "dev-symfony4 as 1.0.x-dev",
+        "ezsystems/ezplatform-solr-search-engine": "dev-symfony4 as 2.0.x-dev",
+        "ezsystems/ezplatform-cron": "dev-symfony4 as 3.0.x-dev",
         "ezsystems/ezplatform-ee-installer": "dev-symfony4 as 3.0.x-dev",
         "ezsystems/ezplatform-page-builder": "dev-symfony4 as 2.0.x-dev",
         "ezsystems/ezplatform-page-fieldtype": "dev-symfony4 as 2.0.x-dev",
-        "ezsystems/ezplatform-richtext": "dev-symfony4 as 2.0.x-dev",
-        "ezsystems/ezplatform-standard-design": "dev-symfony4 as 0.3.x-dev",
-        "ezsystems/ezplatform-user": "dev-symfony4 as 2.0.x-dev",
         "ezsystems/ezplatform-workflow": "dev-symfony4 as 2.0.x-dev",
         "ezsystems/ezplatform-form-builder": "dev-symfony4 as 2.0.x-dev",
-        "ezsystems/ezpublish-kernel": "dev-symfony4 as 8.0.x-dev",
-        "ezsystems/ezplatform-rest": "dev-symfony4 as 1.0.x-dev",
         "ezsystems/date-based-publisher": "dev-symfony4 as 4.0.x-dev",
         "ezsystems/flex-workflow": "dev-symfony4 as 4.0.x-dev",
-        "ezsystems/repository-forms": "dev-symfony4 as 3.0.x-dev",
         "friendsofsymfony/jsrouting-bundle": "^2.3",
         "gregwar/captcha-bundle": "^2.0",
         "knplabs/knp-menu-bundle": "^2.2",
-        "leafo/scssphp": "^0.8",
         "lexik/jwt-authentication-bundle": "^2.6",
+        "php-http/guzzle6-adapter": "^2.0",
         "sensio/framework-extra-bundle": "^5.1",
         "sensiolabs/security-checker": "^5.0",
-        "symfony/monolog-bundle": "^3.3",
-        "symfony/swiftmailer-bundle": "^3.2",
-        "symfony/thanks": "^1.1",
-        "symfony/webpack-encore-bundle": "^1.6",
+        "symfony/asset": "^4.2",
+        "symfony/cache": "^4.2",
+        "symfony/console": "^4.2",
         "symfony/dotenv": "^4.2",
-        "twig/extensions": "^1.5",
-        "twig/twig": "^2.10",
-        "white-october/pagerfanta-bundle": "^1.2",
-        "willdurand/js-translation-bundle": "^2.6"
+        "symfony/expression-language": "^4.2",
+        "symfony/flex": "^1.1",
+        "symfony/form": "^4.2",
+        "symfony/framework-bundle": "^4.2",
+        "symfony/monolog-bundle": "^3.1",
+        "symfony/orm-pack": "^1.0",
+        "symfony/process": "^4.2",
+        "symfony/proxy-manager-bridge": "^4.2",
+        "symfony/security-bundle": "^4.2",
+        "symfony/serializer-pack": "^1.0",
+        "symfony/swiftmailer-bundle": "^3.1",
+        "symfony/translation": "^4.2",
+        "symfony/twig-bundle": "^4.2",
+        "symfony/validator": "^4.2",
+        "symfony/web-link": "^4.2",
+        "symfony/webpack-encore-bundle": "^1.4",
+        "symfony/yaml": "^4.2"
     },
     "require-dev": {
         "behat/behat": "^3.5",
+        "behat/mink": "^1.7",
         "behat/mink-extension": "^2.3",
         "behat/mink-goutte-driver": "^1.2",
         "behat/mink-selenium2-driver": "^1.3",
         "behat/symfony2-extension": "^2.1",
         "bex/behat-screenshot": "^1.2",
-        "ezsystems/behat-screenshot-image-driver-cloudinary": "^1.1.0@dev",
+        "ezsystems/behat-screenshot-image-driver-cloudinary": "^1.1@dev",
         "ezsystems/behatbundle": "dev-symfony4 as 7.0.x-dev",
         "liuggio/fastest": "^1.6",
-        "phpunit/phpunit": "^6.5.13",
         "symfony/debug-pack": "^1.0",
         "symfony/maker-bundle": "^1.0",
-        "symfony/phpunit-bridge": "^4.2",
-        "symfony/web-server-bundle": "^4.2"
+        "symfony/test-pack": "^1.0",
+        "symfony/web-server-bundle": "^4.2",
+        "phpunit/phpunit": "^6.5"
     },
     "conflict": {
-        "symfony/symfony": "*"
+      "symfony/symfony": "*"
     },
     "replace": {
-        "ezsystems/ezstudio": "*",
-        "ezsystems/ezpublish-community": "*"
+      "ezsystems/ezstudio": "*",
+      "ezsystems/ezpublish-community": "*"
     },
     "autoload": {
         "psr-4": {
@@ -189,23 +102,19 @@
         }
     },
     "scripts": {
-        "auto-scripts": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "@php bin/console bazinga:js-translation:dump public/assets --merge-domains",
-            "yarn install",
-            "EzSystems\\EzPlatformEncoreBundle\\Composer\\ScriptHandler::compileAssets",
-            "@php bin/security-checker security:check"
-        ],
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "bazinga:js-translation:dump %PUBLIC_DIR%/assets --merge-domains": "symfony-cmd",
+            "yarn install": "script",
+            "ezplatform:encore:compile": "symfony-cmd",
+            "security-checker security:check": "script"
+        },
         "post-install-cmd": [
             "@auto-scripts"
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ],
-        "post-create-project-cmd": [
-            "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::installWelcomeText"
         ],
         "ezplatform-install": [
             "@php bin/console ezplatform:install ezplatform-ee-clean"
@@ -215,12 +124,12 @@
         "preferred-install": {
             "ezsystems/*": "dist"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "bin-dir": "bin/"
     },
     "extra": {
         "symfony": {
-            "allow-contrib": false,
-            "require": "4.2.*"
+            "allow-contrib": true
         },
         "branch-alias": {
             "dev-master": "3.0.x-dev"

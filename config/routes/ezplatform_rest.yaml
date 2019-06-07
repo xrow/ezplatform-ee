@@ -1,8 +1,8 @@
-kernel.rest:
+ezplatform_rest:
     resource: '@EzPlatformRestBundle/Resources/config/routing.yml'
     prefix: '%ezpublish_rest.path_prefix%'
 
-kernel.rest.options:
+ezplatform_rest_options:
     resource: '@EzPlatformRestBundle/Resources/config/routing.yml'
     prefix: '%ezpublish_rest.path_prefix%'
     type: rest_options

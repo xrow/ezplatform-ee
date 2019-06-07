@@ -1,7 +1,6 @@
 # Optimized File cache adapter (from: https://github.com/ezsystems/symfony-tools)
 #
 # Loaded by default, for use on single server setups.
-# If you are on Windows you would have to use `cache.app` by setting `env(CACHE_POOL): "cache.app"` parameter
 services:
     cache.tagaware.filesystem:
         public: true # @todo should be private
